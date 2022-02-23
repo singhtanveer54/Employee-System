@@ -27,6 +27,14 @@ public class Employee {
         this.salary = salary;
     }
 
+    public Employee(String firstName, String lastName, int age, String email, double salary) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.email = email;
+        this.salary = salary;
+    }
+
     public Employee() {
         super();
     }

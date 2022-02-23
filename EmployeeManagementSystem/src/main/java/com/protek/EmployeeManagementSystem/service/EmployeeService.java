@@ -32,4 +32,13 @@ public class EmployeeService {
 
         employeeRepo.deleteById(id);
     }
+
+    public Employee addEmployee(Employee addNewEmployee){
+
+        Employee addedEmployee = new Employee(addNewEmployee.getId(),addNewEmployee.getFirstName(),
+                addNewEmployee.getLastName(),addNewEmployee.getAge(),
+                addNewEmployee.getEmail(),addNewEmployee.getSalary());
+
+        return employeeRepo.saveAndFlush(addedEmployee);
+    }
 }
