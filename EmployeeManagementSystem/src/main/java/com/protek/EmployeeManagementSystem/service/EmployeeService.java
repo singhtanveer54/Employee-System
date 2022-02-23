@@ -14,6 +14,10 @@ public class EmployeeService {
     @Autowired
     EmployeeRepo employeeRepo;
 
+    public EmployeeService(EmployeeRepo employeeRepo){
+        this.employeeRepo = employeeRepo;
+    }
+
     public List<Employee> getAllEmployee(){
 
         List<Employee> listOfEmployees = employeeRepo.findAll();
